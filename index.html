@@ -1,0 +1,78 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>William Isacsson</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div id="header-container" class="header-container"></div>
+
+    <!-- Include the header content using JavaScript -->
+    <script>
+        // Fetch the content of header.html and insert it into the header-container div
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+                
+                // Add the JavaScript code here
+                window.addEventListener('scroll', function () {
+                    var header = document.querySelector('.sticky-header');
+                    header.classList.toggle('sticky', window.scrollY > 0);
+                });
+            })
+            .catch(error => console.error('Error fetching header.html:', error));
+    </script>
+
+    <div class="content">
+    <div class="project-container">
+        <div class="project-video">
+                <!-- Use a container to wrap the iframe with padding-bottom -->
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/KpmvTUeDK7c" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        <div class="project-description">
+            <h2>VAETTIR</h2>
+            <h3>2023 September - 4 weeks</h3>
+            <p>You play as a influencer trying to make the people in your city by doing activities and posting them on the social media app Zwitter.</p>
+            <ul>
+                <li>Working with Blueprints in Unreal Engine 5</li>
+                <li>Transitions</li>
+                <li>Some activities</li>
+            </ul>
+            <a href="vaettir.html">Read More</a>
+        </div>
+        
+    </div>
+    <hr>
+
+    <div class="project-container">
+        <div class="project-description">
+            <h2>VAETTIR</h2>
+            <h3>2023 June - 7 weeks</h3>
+            <p>VÆTTIR is a single-player horror game where the player will collect will-o-wisps and use stealth by crouching and turning off the lantern to avoid the monster controlled by an AI director. This is my third group peoject while studying at FutureGames.</p>
+            <ul>
+                <li>Working with Blueprints in Unreal Engine 5</li>
+                <li>Character Movement</li>
+                <li>Interaction</li>
+            </ul>
+            <a href="vaettir.html">Read More</a>
+        </div>
+        <div class="project-video">
+                <!-- Use a container to wrap the iframe with padding-bottom -->
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/fzsnqhWMDDs" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+    </div>
+    <hr>
+
+ </div>       
+</body>
+</html>
