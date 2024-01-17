@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     width: 65%;
     margin-left: auto;
@@ -6,4 +12,23 @@ body {
     font-family: Georgia;
     background-color: ghostwhite;
     box-sizing: border-box; 
+    padding-top: 100px;
 }
+
+h1, h2, h3, h4, h5, h6, p {
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+a {
+    display: inline-block; /* Ensures the link behaves like a block element */
+    text-align: center;    /* Center-aligns the link within its container */
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 100%;
+    
+}
+
